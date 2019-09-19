@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>validate sdt</title>
+</head>
+<body>
+    <script>
+        function validate_sdt(sdt) {
+            rxp = /^\(([0-9]+){2}\)-\(0([0-9]+){9}\)$/;
+            if (rxp.test(sdt)){
+                return true;
+            }
+            return false;
+        }
+
+        let sdt = "(09)-(0123456789)";
+        console.log(validate_sdt(sdt));
+        sdt = "(09)-(9123456789)";
+        console.log(validate_sdt(sdt));
+        sdt = "(0)-(0123456789)";
+        console.log(validate_sdt(sdt));
+    </script>
+</body>
+</html>
