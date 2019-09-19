@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate account</title>
+</head>
+<body>
+    <script>
+        function validateAccount(str) {
+            rpx = /^[_a-z0-9]{6}$/;
+            if (rpx.test(str)) {
+            return true;
+            }
+            return false;
+        }
+        let account= "123abc_";
+        console.log(validateAccount(account));
+        account="_abc123";
+        console.log(validateAccount(account));
+        account="____";
+        console.log(validateAccount(account));
+        account=".@";
+        console.log(validateAccount(account));
+        account="12345";
+        console.log(validateAccount(account));
+        account="1234_";
+        console.log(validateAccount(account));
+
+    </script>
+</body>
+</html>
