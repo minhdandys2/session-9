@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>validate ten cua lop hoc</title>
+</head>
+<body>
+    <script>
+        function Validate_tenlop(str) {
+            rxp = /^([CAP]+){1}([0-9]+){4}(([GHIKLM]+){1})$/;
+            if (rxp.test(str)) {
+                return true;
+            }
+            return false;
+        }
+
+        let tenlop = "C0488G";
+        console.log(Validate_tenlop(tenlop));
+        tenlop = "C088G";
+        console.log(Validate_tenlop(tenlop));
+        tenlop = "m0488G";
+        console.log(Validate_tenlop(tenlop));
+    </script>
+</body>
+</html>

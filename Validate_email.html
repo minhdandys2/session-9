@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>validate email</title>
+</head>
+<body>
+<script>
+    function validateEmail(str) {
+        rxp = /^[A-z0-9]+[A-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+        if (rxp.test(str)) {
+            return true;
+        }
+        return false;
+    }
+
+    let email= "a@gmail.com";
+    console.log(validateEmail(email));
+    email= "ab@yahoo.com";
+    console.log(validateEmail(email));
+    email= "abc@hotmail.com";
+    console.log(validateEmail(email));
+    email= "@gamil.com";
+    console.log(validateEmail(email));
+    email= "ab@gmail.";
+    console.log(validateEmail(email));
+    email= "@#abc@gamil.com";
+    console.log(validateEmail(email));
+</script>
+</body>
+</html>
